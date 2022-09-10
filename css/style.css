@@ -1,0 +1,345 @@
+/*********** CONSTANCES  *******/
+* {
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  --blue: #0065fc;
+  --light-blue: #deebff;
+  --grey: #f2f2f2;
+}
+
+header, main{
+  margin: 0% 2% 2% 2%;
+}
+body{
+  font-size: 22px;
+}
+h1{
+  font-size: 26px;
+  padding: 30px 0px 0px 44px
+}
+a, li{
+  color: black;
+  text-decoration: none;
+  list-style-type: none;
+}
+img{
+  object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
+}
+
+/*********** HEADER : logo + menu *******/
+
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.logo{
+  width: 200px;
+  padding-left: 15px;
+  object-fit: contain;
+}
+
+/*********** Menu ********/
+
+nav ul{
+  width: 330px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+nav li{
+  width: 100%;
+}
+nav li a{
+  display: block;
+} 
+nav li:hover{
+	border-top: 5px solid #0065FC;
+  color : #0065fc;
+  padding-top: 30px;
+}
+
+/******************** MAIN  *******/
+main{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+/******************** MAIN FORMULAIRE + Rechercher *******/
+
+ .titre{
+  padding: 0px;
+  margin:  0px;
+  line-height: 32px;
+}
+div .rechercher{
+  display: flex;
+  margin: 30px 0px 30px 0px;
+}
+.rechercher i.fa-map-marker-alt{
+  background-color: #f2f2f2;
+  color: #000;
+  border-radius: 15px 0px 0px 15px;
+  border: 1px solid var(--grey);
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rechercher input{
+  border: 1px solid var(--grey);
+  width: auto;
+  padding-left: 30px;
+  font-weight: 800;
+}
+.rechercher button{
+  width: 130px;
+  background-color: var(--blue);
+  color: #fff;
+  width: auto;
+  border-radius: 0px 15px 15px 0px;
+  border: none;
+  font-weight: 700;
+  padding: 15px 10px 15px 40px; 
+  margin: 0px;
+  cursor: pointer;
+}
+.icone .fa-search{
+  visibility: hidden;
+  align-items: left;
+  color: #fff;
+  width: 30px;
+} 
+.rechercher button:hover{
+  background: linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+}
+/******************** MAIN FORMULAIRE + Filtres *******/
+.filtres{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  font-weight: 700;
+  margin-right: 45px;
+}
+.filtres i{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--light-blue);
+  border: 1px solid var(--light-blue);
+  color: #0065fc;
+  border-radius: 50%;
+  height: 52px;
+  width: 52px;
+  position: absolute;
+}
+.filtres button{
+  background-color: #fff;
+  color: #000;
+  font-weight: 700;
+  border-radius: 50px;
+  border: 1px solid var(--light-blue);
+  height: 52px;
+  padding: 10px 30px 10px 65px;
+  
+  text-align: center;
+  cursor: pointer;
+}
+.filtres button:hover{
+  background-color: var(--light-blue);
+  transition: background-color 1s;
+}
+.fas.fa-child{
+  font-size: 28px;
+}
+/******************** MAIN FORMULAIRE + Info *******/
+.info{
+  display: flex;
+  margin: 0px 25px 50px 0px;
+}
+.info i{
+  background-color: #fff;
+  color: var(--blue);
+  border: 1px solid var(--grey);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+ justify-content: center;
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+}
+.info p{
+  display: flex;
+  align-items: center;
+  line-height: 18px;
+  margin-right: 25px;
+}
+/******************** MAIN Article + Aside *******/
+article, aside{
+  background-color: var(--grey);
+  border-radius: 20px;
+  cursor: pointer;
+}
+article{
+  width: 66%;
+}
+aside{
+  width: 30%;
+}
+.element{
+  background-color: white;
+  border: 1px solid var(--grey);
+  border-radius: 20px;
+  padding: 5px;
+}
+.element:hover {
+  box-shadow: 10px 10px 8px #c0c0c0;
+}
+.rating{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding-left: 25px;
+}
+.rating .fa-star{
+  background-color: #fff;
+  font-size: 18px;
+  border: none;
+}
+.blue_star{
+  color: var(--blue);
+}
+.grey_star{
+  color: #c0c0c0;
+}
+
+/******************** MAIN Article + Album_hebergements*******/
+.album_hebergements{
+  display: flex;
+  flex-flow: row wrap;
+  margin-right: 10px;
+}
+.album_hebergements .element{
+  width: 31%;
+  margin: 0px 0px 30px 25px;
+}
+.album_hebergements img{
+  width: 100%;
+  max-height: 230px;
+}
+.album_hebergements p, h3{
+  padding-left: 30px;
+  line-height: 1px;
+}
+.plus{
+  font-weight: bolder;
+  padding: 10px 0px 0px 50px;
+}
+
+/******************** MAIN Aside + Album_populaires *******/
+
+.titretoil{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.titretoil .fa-star{
+  background-color: transparent;
+  color: #000;
+  font-size: larger;
+  border: none;
+  width: 50px;
+}
+.album_populaires .element{
+  width: 86%;
+  height: 250px;
+  margin: 0% 7% 5% 7%;
+}
+.titre_prix h3, p{
+  /* margin-left: 0px; */
+  padding-left: 0px;
+  line-height: 26px;
+}
+.album_populaires img{
+  float: left;
+  width: 40%;
+  height: 100%;
+  border-radius: 20px 0px 0px 20px;
+}
+.description{
+  float: right; 
+   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 55%;
+} 
+.album_populaires .rating{
+  margin-bottom: 10px;
+  margin-left: 0%;
+  padding-left: 0%;
+} 
+
+/******************** MAIN Activites + Album_activites *******/
+.activites{
+  background-color: #fff;
+  margin-top: 30px;
+  width: 100%;
+}
+.album_activites{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 650px;
+}
+.activites .element{
+  border-radius: 20px;
+  box-shadow: 2px 2px 12px var(--grey);
+  border: none;
+  padding:1px 1px 60px 1px;
+  width: 23%;
+}
+.activites .element:hover{
+  box-shadow: 5px 5px 8px #c0c0c0;
+}
+.full{
+  height: 100%;
+}
+.bigger{
+  height: 55%;
+}
+.smaller{
+  height: 35%;
+}
+.photo{ 
+  height: 100%;
+  padding: 2px;
+}
+.photo img{
+width: 100%;
+height: 100%;
+border-radius: 20px 20px 0px 0px;
+}
+
+/******************** FOOTER *******/
+footer{
+  margin-top: 2%;
+  background-color: var(--grey);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 250px;
+}
+.footul{
+  width: 20%;
+}
+.footul h3, li{
+ padding: 5px 2px 2px 0px;
+}

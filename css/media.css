@@ -1,0 +1,259 @@
+/*Styles spécifiques pour les écrans de taille moyenne type tablette*/
+@media screen and (min-width: 769px) and (max-width: 991px){
+    header, main .formulaire, article, aside, .activites, .album_hebergements, .album_populaire, .album_activites, element, footer, footul{
+        width: 100%;
+}
+h3{
+    line-height: 22px;
+}
+div.filtres{
+    height: 200px;
+    width: 400px;
+    margin-bottom: 150px;
+    margin-left: -15px;
+}
+.filtres{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-right: 0px;
+} 
+.filtres p{
+    padding-left: 8px;
+}
+.flex-items:nth-child(1){
+    order: 0;
+    flex: 1 0 100%;
+    align-self: auto;
+}
+.flex-items:nth-child(2){
+    order: 2;
+    flex: 0 1 60%;
+    align-self: auto;
+    padding-right: 16px;
+}
+.flex-items:nth-child(3){
+    order: 3;
+    flex: 0 1 20%;
+    align-self: auto;
+} 
+.flex-items:nth-child(4){
+    order: 4;
+    flex: 1 0 100%;
+    align-self: auto;
+}
+.flex-items:nth-child(5){
+    order: 5;
+    flex: 1 0 100%;
+    align-self: auto;
+}
+article img{
+    min-height: 213px;
+}
+aside, article, .activites{
+    width: 100%;
+    margin: 0%;
+}
+aside{
+    order: 1;
+}
+article{
+    order: 2;
+    background-color: white;
+}
+.activites{
+    order: 3;
+}
+.album_hebergements{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+.album_hebergements .element{
+    width: 98%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.album_populaires .element{
+    width: 98%;
+    margin: auto;
+    margin-bottom: 20px;
+} 
+.album_activites{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: auto;
+    width: 100%;
+    height: fit-content;
+}
+.album_activites .element{
+    width: 100%;
+    height: 350px;
+    margin-bottom: 15px;
+}
+footer{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+.footul{
+    width: 100%;
+} 
+}
+/*Styles spécifiques pour les petits écrans type écrans de mobile en dessous de 768px*/
+@media screen and (min-width: 320px) and (max-width: 768px){
+    .logo{
+        display: block;
+        margin: 5px 5px 5px 90px;
+        width: 40%;
+       justify-content: center;
+    }
+    body{
+        font-size: 97%;
+    }
+    h1{
+        padding: 15px 0px 0px 10px;
+        font-size: 22px;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav li{ 
+        padding-bottom: 10px;
+        border-bottom: 3px solid var(--grey);
+        transition: border-bottom 2s;
+    }
+    nav li:hover{
+        border-bottom: 3px solid #0065FC;
+        border-top: none !important;
+    }
+    .rechercher button{
+      display: flex;
+      width: 52px;
+      align-items: center;
+    } 
+    .text{
+        /* visibility: hidden; */
+        display: none;
+    }
+    .icone .fa-search{
+        color: #fff;
+        display: flex;
+        visibility: visible;
+        align-items: center;
+        margin-left: -20px;
+    }
+    #titre, h1{
+        width: 70%;
+        margin-bottom: 15px;
+    }
+    .rechercher{
+        margin-top: 15px;
+    }
+    div.filtres{
+        height: 200px;
+        width: 400px;
+        margin-bottom: 100px;
+        margin-left: -15px;
+    }
+    .filtres{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: left;
+        margin-right: 0px;
+    } 
+    .filtres p{
+        padding-left: 20px;
+    }
+    .flex-items:nth-child(1){
+        order: 0;
+        flex: 1 0 100%;
+        align-self: auto;
+    }
+    .flex-items:nth-child(2){
+        order: 2;
+        flex: 0 1 60%;
+        align-self: auto;
+        padding-right: 16px;
+    }
+    .flex-items:nth-child(3){
+        order: 3;
+        flex: 0 1 20%;
+        align-self: auto;
+    } 
+    .flex-items:nth-child(4){
+        order: 4;
+        flex: 1 0 100%;
+        align-self: auto;
+    }
+    .flex-items:nth-child(5){
+        order: 5;
+        flex: 1 0 100%;
+        align-self: auto;
+    }
+    .info{
+        width: 400px;
+    }
+    aside, article, .activites{
+        width: 100%;
+        margin: 0%;
+    }
+    aside{
+        order: 1;
+    }
+    article{
+        order: 2;
+        background-color: white;
+    }
+    .activites{
+        order: 3;
+    }
+    .album_hebergements{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0%;
+        padding: 0%;
+    }
+    .album_hebergements .element{
+        width: 98%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    .album_populaires .element{
+        width: 98%;
+        margin: auto;
+        margin-bottom: 20px;
+    } 
+    .album_activites{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: auto;
+        width: 100%;
+        height: fit-content;
+    }
+    .album_activites .element{
+        width: 100%;
+        height: 200px;
+        margin-bottom: 15px;
+    }
+    footer{
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+    }
+    .footul{
+        width: 100%;
+    } 
+
+}
