@@ -6,14 +6,11 @@
   --light-blue: #deebff;
   --grey: #f2f2f2;
 }
-
-header, main{
-  margin: 0% 2% 2% 2%;
-}
 body{
-  font-size: 22px;
+ 
+  font-size: 20px;
 }
-h1{
+h2{
   font-size: 26px;
   padding: 30px 0px 0px 44px
 }
@@ -33,6 +30,7 @@ header{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin: 0% 2% 2% 2%;
 }
 .logo{
   width: 200px;
@@ -43,21 +41,21 @@ header{
 /*********** Menu ********/
 
 nav ul{
-  width: 330px;
+  width: 400px;
   display: flex;
-  justify-content: space-between;
-  text-align: center;
+  /* justify-content:space-between; */
 }
-nav li{
-  width: 100%;
-}
+
 nav li a{
+  min-width: 160px;
+  text-align: center;
+  border-top: 5px solid transparent;
+  padding-top: 20px;
   display: block;
 } 
-nav li:hover{
+nav li:hover a{
 	border-top: 5px solid #0065FC;
   color : #0065fc;
-  padding-top: 30px;
 }
 
 /******************** MAIN  *******/
@@ -65,20 +63,21 @@ main{
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  margin: 0% 2% 3% 2%;
+  width: 96%;
 }
 
 /******************** MAIN FORMULAIRE + Rechercher *******/
-
  .titre{
   padding: 0px;
   margin:  0px;
   line-height: 32px;
 }
-div .rechercher{
+.rechercher{
   display: flex;
   margin: 30px 0px 30px 0px;
 }
-.rechercher i.fa-map-marker-alt{
+.fa-map-marker-alt{
   background-color: #f2f2f2;
   color: #000;
   border-radius: 15px 0px 0px 15px;
@@ -88,7 +87,7 @@ div .rechercher{
   align-items: center;
   justify-content: center;
 }
-.rechercher input{
+input{
   border: 1px solid var(--grey);
   width: auto;
   padding-left: 30px;
@@ -108,7 +107,6 @@ div .rechercher{
 }
 .icone .fa-search{
   visibility: hidden;
-  align-items: left;
   color: #fff;
   width: 30px;
 } 
@@ -118,33 +116,39 @@ div .rechercher{
 /******************** MAIN FORMULAIRE + Filtres *******/
 .filtres{
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   font-weight: 700;
-  margin-right: 45px;
+  margin-right: 50px;
+}
+h4{
+  padding-right: 20px;
 }
 .filtres i{
+  display: inline-block;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   background-color: var(--light-blue);
   border: 1px solid var(--light-blue);
   color: #0065fc;
   border-radius: 50%;
   height: 52px;
   width: 52px;
-  position: absolute;
+  margin-right: 15px;
 }
 .filtres button{
+  display: flex;
+  align-items: center; 
   background-color: #fff;
   color: #000;
   font-weight: 700;
   border-radius: 50px;
   border: 1px solid var(--light-blue);
   height: 52px;
-  padding: 10px 30px 10px 65px;
-  
+  width: fit-content;
+  padding: 10px 15px 10px 0px;
+  margin-right: 50px;
   text-align: center;
   cursor: pointer;
 }
@@ -153,7 +157,7 @@ div .rechercher{
   transition: background-color 1s;
 }
 .fas.fa-child{
-  font-size: 28px;
+  font-size: 30px;
 }
 /******************** MAIN FORMULAIRE + Info *******/
 .info{
@@ -167,7 +171,7 @@ div .rechercher{
   border-radius: 50%;
   display: flex;
   align-items: center;
- justify-content: center;
+  justify-content: center;
   width: 35px;
   height: 35px;
   padding: 5px;
@@ -221,7 +225,7 @@ aside{
 .album_hebergements{
   display: flex;
   flex-flow: row wrap;
-  margin-right: 10px;
+  margin-right: 16px;
 }
 .album_hebergements .element{
   width: 31%;
@@ -229,11 +233,11 @@ aside{
 }
 .album_hebergements img{
   width: 100%;
-  max-height: 230px;
+  max-height: 180px;
 }
 .album_hebergements p, h3{
-  padding-left: 30px;
-  line-height: 1px;
+  padding-left: 20px;
+  line-height: 10px;
 }
 .plus{
   font-weight: bolder;
@@ -264,7 +268,7 @@ aside{
 .titre_prix h3, p{
   /* margin-left: 0px; */
   padding-left: 0px;
-  line-height: 26px;
+  line-height: 30px;
 }
 .album_populaires img{
   float: left;
@@ -330,16 +334,68 @@ border-radius: 20px 20px 0px 0px;
 
 /******************** FOOTER *******/
 footer{
-  margin-top: 2%;
+  margin: 0%;
+  width: 100%;
   background-color: var(--grey);
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 250px;
+  height: 200px;
 }
 .footul{
-  width: 20%;
+  width: 28%;
 }
-.footul h3, li{
- padding: 5px 2px 2px 0px;
+footer h4{
+  padding-left: 40px;
 }
+.footul li{
+  padding: 2px 0px 2px 0px;
+}
+.hidden{
+  visibility: hidden;
+}
+/* Styles spécifiques pour les écrans de tailles intermédiaires type grandes tablettes et petits laptops. */
+@media screen and (min-width: 999px) and (max-width: 1715px){ 
+    
+  h2{
+      font-size: 110%; 
+  }
+  .filtres button{
+      margin-right: 10px;  
+  }
+  main, footer, h3, p{
+      font-size: 85%; 
+  }
+ .element h3{
+      line-height: 20px;
+  } 
+  .album_hebergements{
+      display: flex;
+      flex-flow: row wrap;
+  }
+  .album_hebergements .element{
+      width: 29%;
+      padding: 3px;
+  }
+  .album_hebergements img{
+      width: 100%;
+      height: 166px;
+  }
+  aside{
+      width: 32%;
+  }
+  .titretoil{
+      padding-left: 10px;
+  }
+  .album_populaires .element{
+      width: 96%;
+      height: 166px;
+      margin: 0px 5px 20px 5px;
+  }
+  /* .titre_prix h3, p{
+      line-height: 15px;
+  } */
+  .footul{
+      width: 35%;
+  } 
+  } 
