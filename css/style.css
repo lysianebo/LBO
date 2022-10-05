@@ -7,12 +7,15 @@
   --grey: #f2f2f2;
 }
 body{
- 
-  font-size: 20px;
+  font-size: 18px;
+  margin: 1%;
+}
+h1{
+  font-size: 140%;
 }
 h2{
-  font-size: 26px;
-  padding: 30px 0px 0px 44px
+  font-size: 130%;
+  padding: 20px 0px 0px 20px
 }
 a, li{
   color: black;
@@ -24,17 +27,15 @@ img{
   border-radius: 20px 20px 0px 0px;
 }
 
-/*********** HEADER : logo + menu *******/
-
+/*********************************************** HEADER : logo + menu *******/
 header{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 0% 2% 2% 2%;
 }
 .logo{
   width: 200px;
-  padding-left: 15px;
+  padding-left: 30px;
   object-fit: contain;
 }
 
@@ -43,11 +44,9 @@ header{
 nav ul{
   width: 400px;
   display: flex;
-  /* justify-content:space-between; */
 }
-
 nav li a{
-  min-width: 160px;
+  min-width: 170px;
   text-align: center;
   border-top: 5px solid transparent;
   padding-top: 20px;
@@ -55,150 +54,139 @@ nav li a{
 } 
 nav li:hover a{
 	border-top: 5px solid #0065FC;
-  color : #0065fc;
+    color : #0065fc;
 }
 
-/******************** MAIN  *******/
-main{
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  margin: 0% 2% 3% 2%;
-  width: 96%;
-}
 
-/******************** MAIN FORMULAIRE + Rechercher *******/
- .titre{
-  padding: 0px;
-  margin:  0px;
-  line-height: 32px;
+/*************************************** FORMULAIRE + Rechercher *******/
+.titre{
+    line-height: 1px;
+    margin-bottom: 20px;
 }
-.rechercher{
-  display: flex;
-  margin: 30px 0px 30px 0px;
+form div, .info{
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
 }
-.fa-map-marker-alt{
-  background-color: #f2f2f2;
-  color: #000;
-  border-radius: 15px 0px 0px 15px;
-  border: 1px solid var(--grey);
-  width: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/************************DIV recherche*****/
+
+input, button{
+    border: 1px solid var(--grey);
+    text-align: center;
+    font-weight: 700;
+    height: 52px;
 }
 input{
-  border: 1px solid var(--grey);
-  width: auto;
-  padding-left: 30px;
-  font-weight: 800;
-}
-.rechercher button{
-  width: 130px;
-  background-color: var(--blue);
-  color: #fff;
-  width: auto;
-  border-radius: 0px 15px 15px 0px;
   border: none;
-  font-weight: 700;
-  padding: 15px 10px 15px 40px; 
-  margin: 0px;
-  cursor: pointer;
+  border-top: 1px solid var(--grey);
+  border-bottom: 1px solid var(--grey) ;
 }
-.icone .fa-search{
-  visibility: hidden;
-  color: #fff;
-  width: 30px;
+button.marker{
+  border-right: none;
+  border-radius: 15px 0px 0px 15px;
+  padding: 0px;
+}
+button.rechercher{
+    background-color: var(--blue);
+    color: #fff;
+    border-radius: 0px 15px 15px 0px;
+    border: none;
+    cursor: pointer;
+    padding-left: 20px;
+}
+.fa-search{
+    visibility: hidden;
+    color: #fff;
+}
+.rechercher:hover{
+    background: linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+}
+/******************** DIV filtres *******/
+
+.filtres button{  
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    color: #000;
+    border-radius: 50px;
+    border: 2px solid var(--grey);
+    width: fit-content;
+    padding-right: 15px;
+    margin-left: 35px;
+    cursor: pointer;
+}
+.filtres button:hover{
+    background-color: var(--light-blue);
+    transition: background-color 1s;
+}
+/******************** DIV info *******/
+div.info{ 
+  align-items: baseline; 
 } 
-.rechercher button:hover{
-  background: linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+
+/* **************Gestion des Icônes du Formulaire******************** */
+.fas{
+    color: var(--blue);
+    border-radius: 50%;
+    font-size: 22px;
+    padding: 16px 12px;
+    margin-left: -6px;
 }
-/******************** MAIN FORMULAIRE + Filtres *******/
-.filtres{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  margin-right: 50px;
+.fa-map-marker-alt {
+  color: #000;
+  width: 56px;
 }
-h4{
-  padding-right: 20px;
-}
-.filtres i{
-  display: inline-block;
+.filtres .fas{
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--light-blue);
-  border: 1px solid var(--light-blue);
+  border: none;
   color: #0065fc;
   border-radius: 50%;
   height: 52px;
   width: 52px;
   margin-right: 15px;
 }
-.filtres button{
-  display: flex;
-  align-items: center; 
-  background-color: #fff;
-  color: #000;
-  font-weight: 700;
-  border-radius: 50px;
-  border: 1px solid var(--light-blue);
-  height: 52px;
-  width: fit-content;
-  padding: 10px 15px 10px 0px;
-  margin-right: 50px;
-  text-align: center;
-  cursor: pointer;
+.fa-child{
+  font-size: 24px;
+  padding: 14px 15px;
 }
-.filtres button:hover{
-  background-color: var(--light-blue);
-  transition: background-color 1s;
+.fa-money-bill-wave-alt{
+  padding: 15px 10px;
 }
-.fas.fa-child{
-  font-size: 30px;
+.info .fas{
+    background-color: #fff;
+    border: 2px solid var(--grey);
+    font-size: 10px;
+    padding: 8px 6px; 
+    margin-right: 15px;
+    margin-left: 2px;
 }
-/******************** MAIN FORMULAIRE + Info *******/
-.info{
-  display: flex;
-  margin: 0px 25px 50px 0px;
+/******************** MAIN - Article + Aside *******/
+main{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
 }
-.info i{
-  background-color: #fff;
-  color: var(--blue);
-  border: 1px solid var(--grey);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 35px;
-  height: 35px;
-  padding: 5px;
-}
-.info p{
-  display: flex;
-  align-items: center;
-  line-height: 18px;
-  margin-right: 25px;
-}
-/******************** MAIN Article + Aside *******/
 article, aside{
   background-color: var(--grey);
   border-radius: 20px;
   cursor: pointer;
 }
 article{
-  width: 66%;
+  width: 65%;
 }
 aside{
-  width: 30%;
+  width: 31%;
 }
 .element{
   background-color: white;
   border: 1px solid var(--grey);
   border-radius: 20px;
+  box-shadow: 1px 1px 15px #c0c0c0;
   padding: 5px;
+  margin-bottom: 30px;
 }
 .element:hover {
   box-shadow: 10px 10px 8px #c0c0c0;
@@ -207,7 +195,7 @@ aside{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  padding-left: 25px;
+  padding-bottom: 5px;
 }
 .rating .fa-star{
   background-color: #fff;
@@ -225,23 +213,32 @@ aside{
 .album_hebergements{
   display: flex;
   flex-flow: row wrap;
-  margin-right: 16px;
+  justify-content: space-evenly; 
+  /* padding: 0px 15px 0px 15px; */
 }
 .album_hebergements .element{
-  width: 31%;
-  margin: 0px 0px 30px 25px;
+  width: 30%;
+ }
+ /******************** MAIN Article + Album_hebergements + Description*******/
+.album_hebergements .description{
+  display: flex;
+  flex-direction: column; 
+  padding-left: 20px;
+  height: fit-content;
+} 
+ .album_hebergements .description h3, p{
+  margin: 0%;
+  height: 40px;
+  line-height: 20px;
 }
 .album_hebergements img{
   width: 100%;
-  max-height: 180px;
-}
-.album_hebergements p, h3{
-  padding-left: 20px;
-  line-height: 10px;
+  height: 180px;
+  margin-bottom: 15px;
 }
 .plus{
   font-weight: bolder;
-  padding: 10px 0px 0px 50px;
+  padding-left: 60px;
 }
 
 /******************** MAIN Aside + Album_populaires *******/
@@ -251,49 +248,53 @@ aside{
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
 }
 .titretoil .fa-star{
   background-color: transparent;
   color: #000;
-  font-size: larger;
+  font-size: larger; 
   border: none;
-  width: 50px;
+  width: 30px;
+  padding: 0px;
 }
 .album_populaires .element{
-  width: 86%;
-  height: 250px;
-  margin: 0% 7% 5% 7%;
+  width: 84%;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.titre_prix h3, p{
-  /* margin-left: 0px; */
-  padding-left: 0px;
-  line-height: 30px;
+
+/******************** MAIN Aside + Album_populaires + Description *******/
+ .album_populaires .description{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  height: 190px;
+  padding-top: 10px;
 }
+.titre_prix{
+  display: flex;
+  flex-direction: column;
+  height: 60%;
+}
+.titre_prix h3{
+  margin: 0%;
+  height: fit-content;
+  line-height: 20px;
+  padding-bottom: 10px;
+}
+/******************** MAIN Aside + Album_populaires + Images *******/
 .album_populaires img{
   float: left;
-  width: 40%;
+  width: 42%;
   height: 100%;
   border-radius: 20px 0px 0px 20px;
+  margin-right: 15px;
 }
-.description{
-  float: right; 
-   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  width: 55%;
-} 
-.album_populaires .rating{
-  margin-bottom: 10px;
-  margin-left: 0%;
-  padding-left: 0%;
-} 
-
 /******************** MAIN Activites + Album_activites *******/
 .activites{
   background-color: #fff;
-  margin-top: 30px;
   width: 100%;
 }
 .album_activites{
@@ -301,18 +302,22 @@ aside{
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
-  height: 650px;
+  height: 660px;
 }
 .activites .element{
   border-radius: 20px;
   box-shadow: 2px 2px 12px var(--grey);
   border: none;
-  padding:1px 1px 60px 1px;
+  padding:1px 1px 80px 1px;
   width: 23%;
 }
 .activites .element:hover{
   box-shadow: 5px 5px 8px #c0c0c0;
 }
+.activites h3{
+ padding-left: 20px;
+}
+/******************** MAIN Activites + Album_activites + Formats Images*******/
 .full{
   height: 100%;
 }
@@ -327,75 +332,24 @@ aside{
   padding: 2px;
 }
 .photo img{
-width: 100%;
-height: 100%;
-border-radius: 20px 20px 0px 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px 20px 0px 0px;
 }
-
 /******************** FOOTER *******/
 footer{
-  margin: 0%;
-  width: 100%;
   background-color: var(--grey);
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   height: 200px;
+  margin-top: 2%;
 }
-.footul{
-  width: 28%;
-}
-footer h4{
-  padding-left: 40px;
-}
-.footul li{
-  padding: 2px 0px 2px 0px;
+.footul h4, ul{
+  width: auto;
+  padding-left: 50px;
+  line-height: 30px;
 }
 .hidden{
   visibility: hidden;
 }
-/* Styles spécifiques pour les écrans de tailles intermédiaires type grandes tablettes et petits laptops. */
-@media screen and (min-width: 999px) and (max-width: 1715px){ 
-    
-  h2{
-      font-size: 110%; 
-  }
-  .filtres button{
-      margin-right: 10px;  
-  }
-  main, footer, h3, p{
-      font-size: 85%; 
-  }
- .element h3{
-      line-height: 20px;
-  } 
-  .album_hebergements{
-      display: flex;
-      flex-flow: row wrap;
-  }
-  .album_hebergements .element{
-      width: 29%;
-      padding: 3px;
-  }
-  .album_hebergements img{
-      width: 100%;
-      height: 166px;
-  }
-  aside{
-      width: 32%;
-  }
-  .titretoil{
-      padding-left: 10px;
-  }
-  .album_populaires .element{
-      width: 96%;
-      height: 166px;
-      margin: 0px 5px 20px 5px;
-  }
-  /* .titre_prix h3, p{
-      line-height: 15px;
-  } */
-  .footul{
-      width: 35%;
-  } 
-  } 
